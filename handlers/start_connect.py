@@ -16,6 +16,7 @@ async def start(message: types.Message, state=None):
            "YouTube – Ссылка на наш YouTube канал"\
     
     await message.answer(text,parse_mode=types.ParseMode.MARKDOWN,disable_web_page_preview=True, reply_markup=main_menu)
-
+    
+    return
 def register_handlers_start_connect(dp: Dispatcher):
     dp.register_message_handler(start,commands="start",state=None)
